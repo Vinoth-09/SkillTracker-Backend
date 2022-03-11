@@ -16,7 +16,6 @@ namespace Profile.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    // [TypeFilter(typeof(GloabalExceptionFillter))]
     public class ProfileController : ControllerBase
     {
         private readonly IMediator _mediator;

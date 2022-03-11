@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile.API", "Profile\Profile.API\Profile.API.csproj", "{77FD8487-6E9E-47E7-839D-C357619CD3CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.Profile.API", "Profile\Profile.API\SkillTracker.Profile.API.csproj", "{77FD8487-6E9E-47E7-839D-C357619CD3CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile.Application", "Profile\Profile.Application\Profile.Application.csproj", "{BF71481D-E99D-4E3E-A253-E53FB1548353}"
 EndProject
@@ -13,13 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile.Infrastructure", "P
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{242C1BC7-594F-43FA-AD23-8EB11B7C53DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.API", "Admin\Admin.API\Admin.API.csproj", "{B443F949-882A-4216-8203-D17EEAD4CE32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.Admin.API", "Admin\Admin.API\SkillTracker.Admin.API.csproj", "{B443F949-882A-4216-8203-D17EEAD4CE32}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messaging", "Common\EventBus.Messaging\EventBus.Messaging.csproj", "{B371C922-2686-4835-BE2B-C2FA2E63ABC8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Profile", "Profile", "{CB1FEB94-5FDE-49E8-85CD-B52EECF669F4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SkillTracker.Profile", "SkillTracker.Profile", "{CB1FEB94-5FDE-49E8-85CD-B52EECF669F4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{F5DA568F-D9D8-4D90-BE09-5861D915996A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SkillTracker.Admin", "SkillTracker.Admin", "{F5DA568F-D9D8-4D90-BE09-5861D915996A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Domain", "Admin\Admin.Domain\Admin.Domain.csproj", "{EC06DD77-6062-4C43-8573-E8F2C64575F5}"
 EndProject
@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Application", "Admin\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.Infrastructure", "Admin\Admin.Infrastructure\Admin.Infrastructure.csproj", "{A8580AF5-5116-4772-BBB6-06F5165F9F88}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{94A79699-495E-4D51-A675-D6492059B16A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SkillTracker.Common", "SkillTracker.Common", "{94A79699-495E-4D51-A675-D6492059B16A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.Entities", "Common\SkillTracker.Entities\SkillTracker.Entities.csproj", "{F632E801-2E94-4B7D-8C40-EB32D71DA9A1}"
 EndProject
