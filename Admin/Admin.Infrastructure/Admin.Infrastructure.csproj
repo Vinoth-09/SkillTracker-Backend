@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.ElastiCache" Version="3.7.3.44" />
+    <PackageReference Include="EnyimMemcachedCore" Version="2.5.3" />
+	<PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.0.88" />
+	<PackageReference Include="Microsoft.Azure.Cosmos" Version="3.25.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.14" />
+    <PackageReference Include="NEST" Version="7.15.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Profile\Profile.Domain\Profile.Domain.csproj" />
+    <ProjectReference Include="..\Admin.Application\Admin.Application.csproj" />
+  </ItemGroup>
+
+</Project>

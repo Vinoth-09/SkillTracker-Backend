@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "serviceActions": {
+        "dynamodb": "StartWithoutDebugging",
+        "profile.api": "StartWithoutDebugging"
+      },
+      "commandVersion": "1.0"
+    }
+  }
+}

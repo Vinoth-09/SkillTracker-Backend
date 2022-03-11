@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+
+  memcached:
+    container_name: memcached
+    ports: 
+        - 11211:11211
+
+  #elasticsearch:
+  #  container_name: elasticsearch
+  #  restart: always
+  #  environment:
+  #      - discovery.type=single-node
+  #  ports:
+  #      - "9200:9200"
+  #      - "9300:9300"
+  #  volumes:
+  #      - esdata:/usr/share/elasticsearch/data
+
+  profile.api:
+    container_name: profile.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - AWS_ACCESS_KEY_ID=foo
+      - AWS_SECRET_ACCESS_KEY=foo
+      - REGION='eu-west-1'
+    restart: always
+    ports:
+      - "8001:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  admin.api:
+    container_name: admin.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: always
+    ports:
+      - "8002:80"
+
+  dynamodb:
+    container_name: dynamodb-local
+    environment:
+      - AWS_ACCESS_KEY_ID=foo
+      - AWS_SECRET_ACCESS_KEY=foo
+    restart: always
+
+volumes:
+  esdata:
+    driver: local

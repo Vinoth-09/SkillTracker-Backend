@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+	  <PackageReference Include="EnyimMemcachedCore" Version="2.5.3" />
+	  <PackageReference Include="FluentValidation" Version="10.3.4" />
+	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.4" />
+	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+	  <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.25.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.14" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\SkillTracker.Entities\SkillTracker.Entities.csproj" />
+    <ProjectReference Include="..\Admin.Domain\Admin.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

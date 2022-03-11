@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  memcached:
+    image: memcached:alpine
+
+  #elasticsearch:
+  #  image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+
+  profile.api:
+    image: ${DOCKER_REGISTRY-}profileapi
+    depends_on:
+      - dynamodb
+    build:
+      context: .
+      dockerfile: Profile/Profile.API/Dockerfile
+
+  admin.api:
+    image: ${DOCKER_REGISTRY-}profileapi
+    depends_on:
+      - rabbitmq
+    build:
+      context: .
+      dockerfile: Admin/Admin.API/Dockerfile
+
+  dynamodb:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal

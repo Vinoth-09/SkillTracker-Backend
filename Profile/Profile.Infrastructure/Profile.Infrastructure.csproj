@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\PersonalInfoRepository.cs" />
+    <Compile Remove="Repositories\SkillRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.0.88" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.25.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Profile.Application\Profile.Application.csproj" />
+    <ProjectReference Include="..\Profile.Domain\Profile.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
